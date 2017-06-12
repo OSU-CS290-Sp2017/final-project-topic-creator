@@ -1,3 +1,4 @@
+
 body{
   background-color: cornflowerblue;
   margin: 0px;
@@ -73,3 +74,8 @@ h1{
    color: #454545;
    padding: 10px ;
 }
+=======
+p {
+    text-align: center;
+}
+
