@@ -39,7 +39,7 @@ module.exports = (db) => {
         databasePromises.push(new Promise((resolve, rej) => {
             db.collection(process.env.TOPICS_COLLECTION).update(
                 { id: req.body.topicId }, 
-                { $push: { comments: newComment.id }},
+                { $push: { comments: newComment.id } },
                 (err, doc) => {
                     if (err) {
                         console.log(err);
