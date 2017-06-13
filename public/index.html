@@ -5,35 +5,44 @@
     <meta charset="utf-8">
     <title>Discussion Board</title>
 
-    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="../node_modules/spectre.css/docs/dist/spectre.css"/>
+    <link rel="stylesheet" href="style.css" media="screen"/>
 
   </head>
 
   <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="site-title">Discussion Board</h1>
 
-    <header>
-      <a href="#"><h1 class="site-title">Discussion Board</h1></a>
+        <nav class="navbar navlist">
+          <ul class="tab">
+            <li class="tab-item"><a href="#"><button class="btn active">Home</button></a></li>
+            <li class="tab-item"><a href="#"><button class="btn">[Category 1]</button></a></li>
+            <li class="tab-item"><a href="#"><button class="btn">[Category 2]</button></a></li>
+            <li class="tab-item"><a href="#"><button class="btn">[Category 3]</button></a></li>
+          </ul>
+        </nav>
+      </header>
 
-      <nav class="navbar">
-        <ul class="navlist">
-          <li class="navitem navlink active"><a href="#">Home</a></li>
-          <li class="navitem navlink"><a href="#">[Category 1]</a></li>
-          <li class="navitem navlink"><a href="#">[Category 2]</a></li>
-          <li class="navitem navlink"><a href="#">[Category 3]</a></li>
-        </ul>
-      </nav>
-    </header>
+      <main class="index-container">
+        <div class = "index-box">
+          <a href="#">[Category 1]</a>
+        </div>
+        <div class = "index-box">
+          <a href="#">[Category 2]</a>
+        </div>
+        <div class = "index-box">
+          <a href="#">[Category 3]</a>
+        </div>
+      </main>
+    </div>
 
-    <main class="index-container">
-      <div class = "index-box">
-        <a href="#">[Category 1]</a>
-      </div>
-      <div class = "index-box">
-        <a href="#">[Category 2]</a>
-      </div>
-      <div class = "index-box">
-        <a href="#">[Category 3]</a>
-      </div>
+    <footer>
+      <p>
+        Whatever footer stuff we're gonna have.
+      </p>
+    </footer>
 
   </body>
 

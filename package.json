@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/OSU-CS290-Sp2017/final-project-topic-creator/issues"
   },
-  "homepage": "https://github.com/OSU-CS290-Sp2017/final-project-topic-creator#readme"
+  "homepage": "https://github.com/OSU-CS290-Sp2017/final-project-topic-creator#readme",
+  "dependencies": {
+    "spectre.css": "^0.2.14"
+  }
 }
