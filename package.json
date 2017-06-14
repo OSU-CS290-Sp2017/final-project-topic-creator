@@ -4,7 +4,8 @@
   "description": "A website where you can discuss topics about categories!",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,12 @@
   },
   "homepage": "https://github.com/OSU-CS290-Sp2017/final-project-topic-creator#readme",
   "dependencies": {
+<<<<<<< HEAD
     "spectre.css": "^0.2.14"
+=======
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.10"
+>>>>>>> 9858744f45e4598735aa8f0c34d283cffa4d259a
   }
 }
