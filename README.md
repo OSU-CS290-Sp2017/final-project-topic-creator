@@ -1,3 +1,2 @@
-# final-project-topic-creator
-final-project-topic-creator created by GitHub Classroom
-
+# Topic Creator
+[Topic Creator](https://topic-creator.herokuapp.com/) is a website where you can have discussions about topics that are categorized. It is created using a NodeJS based Express server with Handlebars as the view engine and MongoDB as the database. For deployment and hosting Heroku is used. The website is developed as a final project [OSU's](http://oregonstate.edu/) CS 290 Web Development class.
