@@ -26,7 +26,10 @@ h1{
   font-weight: 400;
 }
 
-
+.site-title{
+  padding: 10px;
+  padding-left: 50px;
+}
 
 .index-container {
   display: flex;
@@ -57,22 +60,18 @@ h1{
 
 .navlist {
    margin: 0;
-   -webkit-margin-before: 0em;
-   -webkit-margin-after: 0em;
+   padding-left: 40px;
 }
 
-.navitem{
-  display: inline-block;
-  margin: 0px;
-//  border-left: 2px solid;
-//  border-right: 2px solid;
-//  border-color: black;
+.wrapper{
+  min-height: calc(100vh - 70px);
 }
 
-.navitem a {
-   display: inline-block;
-   color: #454545;
-   padding: 10px ;
+footer{
+  border-top: 1px solid gray;
+  background-color: lightgray;
+  padding: 10px;
+  height: 70px;
 }
 
 p {
