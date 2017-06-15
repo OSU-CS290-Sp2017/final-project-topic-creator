@@ -1,8 +1,10 @@
 <main class = "topic-container">
-	{{#each post}}
+	{{#each category}}
 		<article class="topic">
 		  <div class="topic-content">
-			 {{>TopicQuestion}}
+			<p class="topic-question">
+			  {{>TopicQuestion}}
+			</p>
 		  </div>
 		</article>
 	{{/each}}
