@@ -31,7 +31,7 @@ h1{
   padding-left: 50px;
 }
 
-.index-container {
+.category {
   display: flex;
   flex-wrap: wrap;
   padding: 50px;
@@ -39,7 +39,7 @@ h1{
   padding-right: 20px;
 }
 
-.index-box {
+.topic {
 //  max-width: 300px;
   flex: 1 51%;
   flex-grow: 1;
@@ -77,4 +77,3 @@ footer{
 p {
     text-align: center;
 }
-
