@@ -14,6 +14,7 @@ module.exports = (db) => {
     router.use(express.static(path.join(__dirname, "../public")));
     router.use("/topics", require("./topics")(db));
     router.use("/comments", require("./comments")(db));
+    router.use("/categories", require("./categories")(db));
 
     return router;
 };

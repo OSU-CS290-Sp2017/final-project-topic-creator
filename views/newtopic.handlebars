@@ -1,59 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-
-    <meta charset="utf-8">
-    <title>Topic Changer</title>
-
-  </head>
-
-  <body>
-    <header>
-      <!-- The <i> tag below includes the bullhorn icon from Font Awesome -->
-      <h1 class="site-title"> Topic Changer </h1>
-      <nav class="navbar">
-        <ul class="navlist">
-          <li class="navitem navlink"><a href="#"> Home </a></li>
-          <li class="navitem navlink"><a href="#"> Category </a></li>
-          <li class="navitem navlink active"><a href="#"> New Topic </a></li>
-          <li class="navitem navlink"><a href="#"> Topic </a> </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class = "topic-container">
-      <section id="content"></section>
-      <script type = "text/template">
-
-        <form action="/data.json">
-          <fieldset>
-            <legend> Topic Question: </legend>
-            title: <br>
-            <input type="text" name="title"><br>
-            description: <br>
-            <input type="text" name="description"><br>
-            category: <br>
-            <input type="text" name="category"><br>
-            postDate: <br>
-            <input type="text" name="postDate"><br>
-            id: <br>
-            <input type="text" name="id"><br>
-          </fieldset>
-          <fieldset>
-            <legend> Topic Comment </legend>
-            comment: <br>
-            <input type="text" name="comment"><br>
-            postDate: <br>
-            <input type="text" name="postDate"><br>
-          </fieldset>
-          <input type="submit" value="Submit">
-        </form>
-    </main>
-  </body>
-
-  <footer>
-    <a href="https://www.google.com">Here’s a link to Google</a>
-  </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.runtime.js"></script>
-</html>
+<main class = "topic-container">
+	<form action="/data.json">
+	  <fieldset>
+		<legend> Topic Question: </legend>
+		title: <br>
+		<input type="text" name="title"><br>
+		description: <br>
+		<input type="text" name="description"><br>
+		category: <br>
+		<input type="text" name="category"><br>
+		postDate: <br>
+		<input type="text" name="postDate"><br>
+		id: <br>
+		<input type="text" name="id"><br>
+	  </fieldset>
+	  <fieldset>
+		<legend> Topic Comment </legend>
+		comment: <br>
+		<input type="text" name="comment"><br>
+		postDate: <br>
+		<input type="text" name="postDate"><br>
+	  </fieldset>
+	  <input type="submit" value="Submit">
+	</form>
+</main>
