@@ -21,8 +21,14 @@ window.addEventListener('DOMContentLoaded', function(){
 		postRequest.setRequestHeader('Content-Type', 'application/json');
 		
 		postRequest.addEventListener('load', function (event) {
-			if (event.target.status !==200)
+			if (event.target.status !==200) {
 				alert('Sorry your post failed with an error code of' + event.target.status);
+			}
+
+			else {
+				var res = JSON.parse(event.target.response);
+				window.location = "/topics/" + res.topicId;
+			}
 		});
 		
 		var postBody = {
