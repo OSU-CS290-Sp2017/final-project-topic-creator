@@ -1,3 +1,5 @@
+const Handlebars = require("handlebars");
+const moment = require("moment");
 const express = require("express");
 const expressHbs = require("express-handlebars");
 const mongodb = require("mongodb");
@@ -7,6 +9,10 @@ const port = process.env.PORT || 3000;
 
 app.engine("handlebars", expressHbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+Handlebars.registerHelper("formatDate", (date) => {
+    return moment(date).format("MMMM Do YYYY, h:mm a");
+});
 
 mongodb.MongoClient.connect(process.env.MONGODB_URI, (err, database) => {
     if (err) {
