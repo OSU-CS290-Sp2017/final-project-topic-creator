@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', function(){
 			category = document.getElementById('category').value;
 			
 		if (title == '' || description == '' || category == ''){
-			alert("Please fill out all of the input fields.");
+			document.getElementById("errorModal").classList.add("active");
 			return;
 		}
 		

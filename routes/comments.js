@@ -9,10 +9,6 @@ const router = require("express").Router();
         topicId - topic this comment belongs to
 */
 module.exports = (db) => {
-    router.get("/", (req, res) => {
-        res.json({ content: "Hello comments!" });
-    });
-
     router.post("/new", (req, res) => {
         const newComment = {
             id: shortid.generate(),

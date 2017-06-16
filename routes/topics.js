@@ -11,10 +11,6 @@ const router = require("express").Router();
         comments - array of comment ids that belong to this topic
 */
 module.exports = (db) => {
-    router.get("/", (req, res) => {
-        res.json({ content: "Hello topics!" });
-    });
-
     router.get("/new", (req, res) => {
         res.render("newTopic");
     });
@@ -37,7 +33,7 @@ module.exports = (db) => {
 
             return new Promise((resolve, reject) => {
                 db.collection(process.env.COMMENTS_COLLECTION).find({ id: { $in: commentIds }}).toArray((err, docs) => {
-                    if (err || !docs) {
+                    if (err) {
                         reject(err);
                     }
 
@@ -64,7 +60,7 @@ module.exports = (db) => {
             res.render("topic", { topic: data.topic, comments: data.comments });
         }).catch((err) => {
             console.log(err);
-            res.status(404).send();
+            res.status(404).render("404Page");
         });
     });
 

@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function(){
 			id = document.getElementById('hidden').innerHTML;
 			
 		if (comment == ''){
-			alert("Please fill out all of the input fields.");
+			document.getElementById("errorModal").classList.add("active");
 			return;
 		}
 		
@@ -18,7 +18,6 @@ window.addEventListener('DOMContentLoaded', function(){
 		postRequest.setRequestHeader('Content-Type', 'application/json');
 		
 		postRequest.addEventListener('load', function (event) {
-			alert(event.target.status);
 			if (event.target.status !==200)
 				alert('Sorry your post failed with an error code of' + event.target.status);
 		});
