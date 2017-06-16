@@ -14,7 +14,7 @@ module.exports = (db) => {
             }
 
             else {
-                res.json(docs);
+                res.render("category", { topics: docs });
             }
         });
     });

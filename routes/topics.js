@@ -15,6 +15,10 @@ module.exports = (db) => {
         res.json({ content: "Hello topics!" });
     });
 
+    router.get("/new", (req, res) => {
+        res.render("newTopic");
+    });
+
     router.get("/:id", (req, res) => {
         const topicId = req.params.id;
 
@@ -57,17 +61,11 @@ module.exports = (db) => {
                 });
             });
         }).then((data) => {
-            console.log(data);
-            res.json(data);
-            // res.json({ topic: data.topic });
+            res.render("topic", { topic: data.topic, comments: data.comments });
         }).catch((err) => {
             console.log(err);
             res.status(404).send();
         });
-    });
-
-    router.get("/new", (req, res) => {
-        res.render("newTopics");
     });
 
     router.post("/new", (req, res) => {

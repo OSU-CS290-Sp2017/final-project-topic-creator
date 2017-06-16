@@ -8,7 +8,19 @@ module.exports = (db) => {
     router.use(bodyParser.urlencoded({ extended: false }));
 
     router.get("/", (req, res) => {
-        res.render("home");
+        db.collection(process.env.TOPICS_COLLECTION).find({}, { limit: 10 }).toArray((err, docs) => {
+            if (err) {
+                res.render("404Page");
+            }
+
+            else {
+                res.render("home", { topics: docs });
+            }
+        });
+    });
+
+    router.get("/404", (req, res) => {
+        res.render("404Page");
     });
 
     router.use(express.static(path.join(__dirname, "../public")));

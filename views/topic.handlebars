@@ -1,10 +1,13 @@
 <main class = "topic-container">
-{{#each topic}}
 	<article class="topic">
 	  <div class="topic-content">
-		{{>TopicQuestion}}
-		{{>TopicComment}}
+		{{>topicQuestion topic}}
+
+		{{#each comments}}
+		<div class="topic-comments">
+			{{>topicComment}}
+		</div>
+		{{/each}}
 	  </div>
 	</article>
-{{/each}}
 </main>
