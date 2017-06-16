@@ -18,17 +18,13 @@ a{
 
 .site-title{
    color: #fff;
-   padding: 10px
+   padding: 10px;
+   padding-left: 50px;
 }
 
 h1{
   margin: 0px;
   font-weight: 400;
-}
-
-.site-title{
-  padding: 10px;
-  padding-left: 50px;
 }
 
 .category {
@@ -37,10 +33,10 @@ h1{
   padding: 50px;
   padding-left: 20px;
   padding-right: 20px;
+  width: 100%;
 }
 
 .topic {
-//  max-width: 300px;
   flex: 1 51%;
   flex-grow: 1;
   background-color: #fff;
@@ -51,6 +47,10 @@ h1{
   font-size: 20px;
   display: flex;
   border-radius: 10px;
+}
+
+h3{
+  display: inline-block;
 }
 
 .navbar {
