@@ -1,6 +1,6 @@
-const path = require("path");
 const express = require("express");
 const expressHbs = require("express-handlebars");
+const mongodb = require("mongodb");
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -8,12 +8,16 @@ const port = process.env.PORT || 3000;
 app.engine("handlebars", expressHbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-app.get("/", (req, res) => {
-    res.render("home");
-});
+mongodb.MongoClient.connect(process.env.MONGODB_URI, (err, database) => {
+    if (err) {
+        console.log(err);
+        process.exit(1);
+    }
 
-app.use(express.static(path.join(__dirname, "public")));
+    console.log("Connected to database");
+    app.use(require("./routes/index")(database));
 
-app.listen(port, () => {
-    console.log("Listening on port", port);
+    app.listen(port, () => {
+        console.log("Listening on port", port);
+    });
 });
