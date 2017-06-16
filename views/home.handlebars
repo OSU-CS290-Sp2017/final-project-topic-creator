@@ -1,46 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-
-    <meta charset="utf-8">
-    <title>Topic Changer</title>
-
-  </head>
-
-  <body>
-    <header>
-      <h1 class="site-title"> Topic Changer </h1>
-      <nav class="navbar">
-        <ul class="navlist">
-          <li class="navitem navlink active"><a href="#"> Home </a></li>
-          <li class="navitem navlink"><a href="#"> Category </a></li>
-          <li class="navitem navlink"><a href="#"> New Topic </a></li>
-          <li class="navitem navlink"><a href="#"> Topic </a> </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class = "topic-container">
-      <section id="content"></section>
-      <script type = "text/template">
-
-        {{#each}}
-        <article class="topic">
-          <div class="topic-content">
-            <p class="topic-question">
-              {{>TopicQuestion}}
-            </p>
-          </div>
-        </article>
-        {{each}}
-    </main>
-  </body>
-
-
-  <footer>
-    <a href="https://www.google.com">Here’s a link to Google</a>
-  </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.runtime.js"></script>
-
-</html>
+<main class="home">
+	{{#each topics}}
+	<article class="topic">
+		<div class="topic-content">
+			{{>TopicQuestion}}
+		</div>
+	</article>
+	{{/each}}
+</main>
