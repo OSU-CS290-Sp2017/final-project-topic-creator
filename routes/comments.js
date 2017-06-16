@@ -36,7 +36,7 @@ module.exports = (db) => {
             });
         }));
 
-        databasePromises.push(new Promise((resolve, rej) => {
+        databasePromises.push(new Promise((resolve, reject) => {
             db.collection(process.env.TOPICS_COLLECTION).update(
                 { id: req.body.topicId }, 
                 { $push: { comments: newComment.id } },

@@ -25,10 +25,15 @@
   "homepage": "https://github.com/OSU-CS290-Sp2017/final-project-topic-creator#readme",
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "spectre.css": "^0.2.14",
 =======
     "body-parser": "^1.17.2",
 >>>>>>> handlebars
+=======
+    "spectre.css": "^0.2.14",
+    "body-parser": "^1.17.2",
+>>>>>>> 459ef0efd46bb840c69e51b5e1dc786efe619013
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.10",
