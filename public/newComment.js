@@ -1,8 +1,9 @@
 window.addEventListener('DOMContentLoaded', function(){
 	var socket = io();
 
-	socket.on("updateComments", function (comments) {
-		console.log(comments);
+	socket.on("updateComments", function (data) {
+		var comments = data.comments;
+		var topic = data.topic;
 
 		var $commentsContainer = document.querySelector(".comments-container");
 
@@ -10,17 +11,18 @@ window.addEventListener('DOMContentLoaded', function(){
 			$commentsContainer.removeChild($commentsContainer.lastChild);
 		}
 
+		var $topic = document.querySelector(".topic-container");
+		$topic.innerHTML = Handlebars.templates.topicQuestion(topic);
+
 		for (var property in comments) {
 			if (comments.hasOwnProperty(property)) {
 				var topicCommentHtml = Handlebars.templates.topicComment(comments[property]);
-				console.log(topicCommentHtml);
 				$commentsContainer.insertAdjacentHTML("beforeend", topicCommentHtml);
 			}
 		}
 	});
 
 	document.getElementById('submit').addEventListener("click",function(){
-		
 		var comment = document.getElementById('comment').value,
 			id = document.getElementById('hidden').innerHTML;
 

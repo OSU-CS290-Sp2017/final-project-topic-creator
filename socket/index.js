@@ -22,7 +22,7 @@ module.exports = (io, db) => {
             .then(commentsDb.getAllComments)
             .then((data) => {
                 Object.keys(sockets[referer]).forEach((key) => {
-                    sockets[referer][key].emit("updateComments", data.comments);
+                    sockets[referer][key].emit("updateComments", { topic: data.topic, comments: data.comments });
                 });
             });
         });
