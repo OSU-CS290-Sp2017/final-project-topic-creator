@@ -1,21 +1,17 @@
 window.addEventListener('DOMContentLoaded', function(){
 	document.getElementById('submit').addEventListener("click",function(){
-		alert('WHY');
 		
-		var title = document.getElementById('title').value,
-			description = document.getElementById('description').value,
-			category = document.getElementById('category').value;
+		var comment = document.getElementById('comment').value,
+			id = document.getElementById('hidden').innerHTML;
 			
-		if (title == '' || description == '' || category == ''){
+		if (comment == ''){
 			alert("Please fill out all of the input fields.");
 			return;
 		}
 		
-		document.getElementById('title').value = '';
-		document.getElementById('description').value = '';
-		document.getElementById('category').value = '';
+		document.getElementById('comment').value = '';
 		
-		var postURL = "/topics/new";
+		var postURL = "/comments/new";
 		
 		var postRequest = new XMLHttpRequest();
 		postRequest.open('POST', postURL);
@@ -28,9 +24,8 @@ window.addEventListener('DOMContentLoaded', function(){
 		});
 		
 		var postBody = {
-			title: title,
-			description: description,
-			category: category
+			topicId: id,
+			content: comment,
 		};
 		
 		postRequest.send(JSON.stringify(postBody));

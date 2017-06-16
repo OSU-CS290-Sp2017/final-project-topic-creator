@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', function(){
 	document.getElementById('submit').addEventListener("click",function(){
-		alert('WHY');
 		
 		var title = document.getElementById('title').value,
 			description = document.getElementById('description').value,
@@ -22,7 +21,6 @@ window.addEventListener('DOMContentLoaded', function(){
 		postRequest.setRequestHeader('Content-Type', 'application/json');
 		
 		postRequest.addEventListener('load', function (event) {
-			alert(event.target.status);
 			if (event.target.status !==200)
 				alert('Sorry your post failed with an error code of' + event.target.status);
 		});
