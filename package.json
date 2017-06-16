@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "handlebars views/partials/topicComment.handlebars -f public/topicCommentTemplate.js",
+    "prestart": "npm run build",
     "start": "node server.js"
   },
   "repository": {
@@ -31,6 +33,7 @@
     "moment": "^2.18.1",
     "mongodb": "^2.2.28",
     "shortid": "^2.2.8",
+    "socket.io": "^2.0.3",
     "spectre.css": "^0.2.14"
   }
 }

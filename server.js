@@ -4,6 +4,8 @@ const express = require("express");
 const expressHbs = require("express-handlebars");
 const mongodb = require("mongodb");
 const app = express();
+const server = require("http").createServer(app);
+const io = require("socket.io")(server);
 
 const port = process.env.PORT || 3000;
 
@@ -22,8 +24,9 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI, (err, database) => {
 
     console.log("Connected to database");
     app.use(require("./routes/index")(database));
+    require("./socket/index")(io, database);
 
-    app.listen(port, () => {
+    server.listen(port, () => {
         console.log("Listening on port", port);
     });
 });

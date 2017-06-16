@@ -6,4 +6,8 @@ window.onload = function () {
             document.querySelector(".modal.active").classList.remove("active");
         });
     });
+
+    Handlebars.registerHelper("formatDate", function (date) {
+        return moment(date).format("MMMM Do YYYY, h:mm a");
+    });
 };
